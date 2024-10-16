@@ -1,54 +1,41 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
 <?php
 
-include 'conexao.php';  // Inclui o arquivo de conexão.
+include 'conexao.php';  // Inclui o arquivo de conexão
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    //Verificar se já existe
+    // Verificar se já existe o CPF no banco
     $pessoaFJ = $_POST['pessoaFJ'];
-    $pessoaFJ = mysqli_real_escape_string($conexao, $pessoaFJ);
-    $sql = "SELECT pessoaFJ FROM meubanco.clientes WHERE pessoaFJ='$pessoaFJ'";
-    $retorno = mysqli_query($conexao,$sql); 
 
-    if(mysqli_num_rows($retorno)>0){   // Aqui estou verificando se ja exite o cpf nos cadastros
-        echo"CPF JÁ CADASTRADO!<br>";
-    }else{
-    // Receber os dados do formulário
-    $nome = $_POST['nome'];
-    $pessoaFJ = $_POST['pessoaFJ'];
-    $statusDoCliente = $_POST['statuscliente'];
+    $sql = "SELECT pessoaFJ FROM clientes WHERE pessoaFJ = ?";
+    $stmt = $conexao->prepare($sql);
+    $stmt->bind_param("s", $pessoaFJ);
+    $stmt->execute();
+    $resultado = $stmt->get_result();
 
-
-    // Query de inserção no banco de dados
-    $stmt = $conexao->prepare("INSERT INTO clientes ( nome, pessoaFJ, statuscliente) VALUES ( ?, ?, ?)");
-    $stmt->bind_param("sss", $nome, $pessoaFJ, $statusDoCliente); // "sss" significa que são três strings
-      
-    if ($stmt->execute()){
-        echo "Cliente cadastrado com sucesso!";
+    if ($resultado->num_rows > 0) {  // CPF já existe
+        echo "CPF JÁ CADASTRADO!<br>";
     } else {
-        echo "Error ao cadastrar usuário: " . mysqli_connect_error($conexao);
-    }
-      
-    // Fechar a conexão
-    $stmt->close();
-    $conexao->close();
+        // Receber os dados do formulário
+        $nome = $_POST['nome'];
+        $statusDoCliente = $_POST['statuscliente'];
 
-    }
+        // Query de inserção no banco de dados
+        $stmt = $conexao->prepare("INSERT INTO clientes (nome, pessoaFJ, statuscliente) VALUES (?, ?, ?)");
+        $stmt->bind_param("sss", $nome, $pessoaFJ, $statusDoCliente);
 
-    
+        if ($stmt->execute()) {
+            // Pega o último ID inserido e redireciona para a página de resultado
+            $ultimo_id = $conexao->insert_id;
+            header("Location: resultado_do_cadastro.php?id=$ultimo_id");
+            exit();
+        } else {
+            echo "Erro ao cadastrar usuário: " . $stmt->error;
+        }
+
+        // Fechar a conexão
+        $stmt->close();
+        $conexao->close();
+    }
 }
 ?>
-    
-</body>
-</html>
-
-
-    
