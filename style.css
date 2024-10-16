@@ -1,34 +1,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body{
+
+body {
     background-color: #e7f2f8;
     font-family: "Nunito", sans-serif;
 }
 
-.container-titulo{ 
+.container-titulo {
     width: 100%;
     text-align: center;
-    margin-top: 50px ;
-    margin-bottom: 30px ;
+    margin-top: 50px;
+    margin-bottom: 30px;
     padding: 10px;
 }
 
-.titulo{
+.titulo {
     color: #74BDCB;
     font-size: 30px;
 }
 
-.container-formulario{
+.container-formulario {
     width: 100%;
     text-align: center;
 }
 
-.formulario{
+.formulario {
     width: 820px;
     height: 350px;
     display: flex;
@@ -38,10 +39,10 @@ body{
     border: 3px solid #FFA384;
     border-radius: 20px;
     padding: 10px;
-    
+
 }
 
-.input-formulario{
+.input-formulario {
     width: 800px;
     height: 30px;
     border: 1px solid #FFA384;
@@ -50,7 +51,7 @@ body{
     padding: 10px;
 }
 
-.label-formulario{
+.label-formulario {
     font-size: 14px;
     font-weight: 600;
     display: flex;
@@ -58,7 +59,7 @@ body{
     margin: 20px 0 10px 0;
 }
 
-.btn{
+.btn {
     width: 150px;
     font-size: 18px;
     letter-spacing: 2px;
@@ -71,11 +72,8 @@ body{
     transition: background-color 0.5s, color 0.5s;
 }
 
-.btn:hover{
+.btn:hover {
     background-color: #74BDCB;
     color: black;
-    
+
 }
-
-
-

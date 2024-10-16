@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,12 +8,13 @@
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="data:,">
 </head>
+
 <body>
   <div class="container-titulo">
     <h1 class="titulo">Sistema de Cadastro de Clientes</h1>
   </div>
   <div class="container-formulario">
-    <form method="POST" action="inserir_cliente.php"  id="formulario" class="formulario">
+    <form method="POST" action="inserir_cliente.php" id="formulario" class="formulario">
       <div class="campo-formulario">
         <label class="label-formulario" for="nome">Nome:</label>
         <input type="text" id="nome" name="nome" class="input-formulario" required>
@@ -20,14 +22,16 @@
 
       <div class="campo-formulario">
         <label class="label-formulario" for="cpfoucnpj">CPF ou CNPJ:</label>
-        <input type="text" id="cpfoucnpj" name="pessoaFJ" class="input-formulario" maxlength="14" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}|\d{2}\.\d{3}\.\d{3}/\d{4}-\d{2}" required title="Digite o CPF no formato XXX.XXX.XXX-XX ou CNPJ no formato corretoXX.XXX.XXX.XXXX">
+        <input type="text" id="cpfoucnpj" name="pessoaFJ" class="input-formulario" maxlength="14"
+          pattern="\d{3}\.\d{3}\.\d{3}-\d{2}|\d{2}\.\d{3}\.\d{3}/\d{4}-\d{2}" required
+          title="Digite o CPF no formato XXX.XXX.XXX-XX ou CNPJ no formato corretoXX.XXX.XXX.XXXX">
       </div>
 
       <div class="campo-formulario">
         <label class="label-formulario" for="statuscliente">Status do Cliente:</label>
         <input type="text" id="statuscliente" name="statuscliente" class="input-formulario" required>
       </div>
-  
+
       <button type="submit" class="btn">Cadastrar</button>
     </form>
 
@@ -35,4 +39,5 @@
 
   <script src="script.js"></script>
 </body>
+
 </html>
