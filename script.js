@@ -29,17 +29,14 @@ document.addEventListener('DOMContentLoaded', function() {
       method: 'POST',
       body: formData
     })
-    .then(response => response.text())
+    .then(response => response.json()) // Muda para tratar como JSON
     .then(data => {
-      console.log(data)
-      const urlParams = new URLSearchParams(data); // Supondo que data retorna a URL com id
-      const id = urlParams.get('id'); // Pega o ID da URL
-      if (id) {
-        window.location.href = `resultado_do_cadastro.php?id=${id}`; // Redireciona para a página de resultado
-      } 
-
+      if (data.id) { // Verifica se há um ID na resposta
+        window.location.href = `resultado_do_cadastro.php?id=${data.id}`; // Redireciona para a página de resultado
+      } else if (data.error) { // Caso haja um erro
+        console.log('Erro:', data.error);
+      }
       document.getElementById('formulario').reset();
     })
-    .catch(error => console.log('Erro:', error));
   });
 });

@@ -27,10 +27,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($stmt->execute()) {
             // Pega o último ID inserido e redireciona para a página de resultado
             $ultimo_id = $conexao->insert_id;
-            header("Location: resultado_do_cadastro.php?id=$ultimo_id");
+            echo json_encode(['id' => $ultimo_id]); // Retorna o ID em formato JSON
             exit();
         } else {
-            echo "Erro ao cadastrar usuário: " . $stmt->error;
+            echo json_encode(['error' => $stmt->error]); // Retorna o erro em formato JSON
         }
 
         // Fechar a conexão
