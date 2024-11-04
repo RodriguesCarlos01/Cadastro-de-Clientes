@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anamnese das Clientes</title>
+	<link rel="stylesheet" href="anamnese.css">
+</head>
+<body>
+
+	<header class="container-cabecalho">
+		<div class="cabecalho">
+			<div class="logo">
+				<img src="./assets/logo.jpg" alt="">
+			</div>
+
+			<div class="title">
+				<h1>Informações da Cliente</h1>
+			</div>
+		</div>
+	</header>
+
+	<main class="container-principal">
+		<h2>Ficha de Avaliação</h2>
+		<div class="informacoes">
+			<form action="" class="formulario">
+				<fieldset class="formulario-campo">
+					<legend>Avaliação</legend>
+					
+					<div>
+						<label class="label-radio">Usa Lentes de Contato?</label>
+						<div class="campo-radio">
+							<div>
+								<input type="radio" id="lentes-sim" name="lentes" value="s">
+								<label for="lentes-sim">Sim</label>
+							</div>
+							<div>
+								<input type="radio"id="lentes-nao" name="lentes" value="n">
+								<label for="lentes-nao">Não</label>
+							</div>
+						</div>
+					</div>
+
+					<label class="label-radio">Esta de Rímel?</label>
+					<div class="campo-radio">
+						<div>
+							<input type="radio" id="rimel-sim" name="rimel" value="s">
+							<label for="rimel-sim">Sim</label>
+						</div>
+						<div>
+							<input type="radio"id="rimel-nao" name="rimel" value="n">
+							<label for="rimel-nao">Não</label>
+						</div>
+					</div>
+				
+					
+					<label class="label-radio">Tem algum tipo de Alergia?</label>
+					<div class="campo-radio">
+						<div>
+							<input type="radio" id="alergia-sim" name="alergia" value="s">
+							<label for="alergia-sim">Sim</label>
+						</div>
+						<div>
+							<input type="radio"id="alergia-nao" name="alergia" value="n">
+							<label for="alergia-nao">Não</label>
+						</div>
+					</div>
+					<div>
+						<p>(Cosmético, Maquiagem, Esmalte ou a Cianoacrilato)</p>
+						<label for="alergia-detalhes">Especifique: </label>
+						<input type="text" name="alergia-detalhes" id="alergia-detalhes" placeholder="Diga qual é o tipo de alergia "/>
+					</div>
+
+					<label class="label-radio">Tem Tireóide?</label>
+					<div class="campo-radio">
+						<div>
+							<input type="radio" id="tireoide-sim" name="tireoide" value="s">
+							<label for="tireoide-sim">Sim</label>
+						</div>
+						<div>
+							<input type="radio"id="tireoide-nao" name="tireoide" value="n">
+							<label for="tireoide-nao">Não</label>
+						</div>
+					</div>
+
+					<label class="label-radio">Possui Glaucloma?</label>
+					<div class="campo-radio">
+						<div>
+							<input type="radio" id="glaucloma-sim" name="glaucloma" value="s">
+							<label for="glaucloma-sim">Sim</label>
+						</div>
+						<div>
+							<input type="radio"id="glaucloma-nao" name="glaucloma" value="n">
+							<label for="glaucloma-nao">Não</label>
+						</div>
+					</div>
+					<div>
+						<p>Possui algum problema ocular?</p>
+						<label for="especifique">Especifique: </label>
+						<input type="text" id="especifique" name="especifique" placeholder="Deixe-me saber qual é o problema. ">
+					</div>
+
+					<label class="label-radio">Dorme de Lado?</label>
+					<div class="campo-radio">
+						<div>
+							<input type="radio" id="dorme-de-lado-sim" name="dorme-de-lado" value="s">
+							<label for="dorme-de-lado-sim">Sim</label>
+						</div>
+						<div>
+							<input type="radio"id="dorme-de-lado-nao" name="dorme-de-lado" value="n">
+							<label for="dorme-de-lado-nao">Não</label>
+						</div>
+					</div>
+				
+					<div>
+						<label for="detalhes-adicionais">
+							Existe algum problema que julgue ser necessário informar ao profissional antes de procedimento?
+						</label>
+						<input type="text" id="detalhes-adicionais" name="detalhes-adicionais">
+					</div>
+				</fieldset>
+
+				<fieldset>
+					<div>
+						<label for="procedimento">Procedimento: </label>
+						<select id="procedimento" name="procedimento">
+							<option selected>Procedimento Feito</option>
+							<option value="FF">Fio a Fio</option>
+							<option value="VR">Volume Russo</option>
+							<option value="MV">Mega Volume</option>
+							<option value="HB">Hibrido</option>
+							<option value="VB">Volume Brasileiro</option>
+						</select>
+					</div>
+
+					<div>
+						<p>
+							Autorizo a ralização do procedimento de Alogamento de Cilíos. Autorizo o registro de fotografia do antes e depois para documentação e divigação da profissional.
+						</p>
+						<p>
+							As declarações acima são verdadeiras não cabendo ao profissional a responsabelidade por informações omitidas. Me compormeto a seguir todos os cuidados necessários após o procedimento. 
+						</p>
+					</div>
+
+					<div>
+						<label for="data">Data da aplicação do Procedimento:</label>
+						<input type="date" id="data" name="data" placeholder="dia/mês/ano">
+
+						<label for="assinatura" >Assinatura: </label>
+						<input type="text" id="assinatura" name="assinatura">
+					</div>
+
+				</fieldset>
+
+			</form>
+		</div>
+	</main>
+    
+</body>
+</html>

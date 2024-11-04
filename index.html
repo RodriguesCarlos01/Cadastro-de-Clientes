@@ -8,6 +8,18 @@
   <link rel="icon" href="data:,">
 </head>
 <body>
+  <header class="container-cabecalho">
+		<div class="cabecalho">
+			<div class="logo">
+				<img src="./assets/logo.jpg" alt="">
+			</div>
+
+			<div class="title">
+				<h1>Cílios e Sobrancelhas</h1>
+			</div>
+		</div>
+	</header>
+
   <div class="container-titulo">
     <h1 class="titulo">Sistema de Cadastro de Clientes</h1>
   </div>
@@ -19,8 +31,13 @@
       </div>
 
       <div class="campo-formulario">
-        <label class="label-formulario" for="cpfoucnpj">CPF ou CNPJ:</label>
-        <input type="text" id="cpfoucnpj" name="pessoaFJ" class="input-formulario" maxlength="14" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}|\d{2}\.\d{3}\.\d{3}/\d{4}-\d{2}" required title="Digite o CPF no formato XXX.XXX.XXX-XX ou CNPJ no formato corretoXX.XXX.XXX.XXXX">
+        <label class="label-formulario" for="dataNascimento">Data de Nascimento:</label>
+        <input type="date" id="dataNascimento" name="DataNascimento" class="input-formulario" required>
+      </div>
+
+      <div class="campo-formulario">
+        <label class="label-formulario" for="telefone">Telefone:</label>
+        <input type="text" id="telefone" name="Telefone" class="input-formulario" maxlength="15" pattern="\(\d{2}\) \d{5}-\d{4}" required title="Digite seu telefone no formato (XX) XXXXX-XXXX">
       </div>
 
       <div class="campo-formulario">

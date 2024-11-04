@@ -10,6 +10,40 @@ body{
     font-family: "Nunito", sans-serif;
 }
 
+.container-cabecalho{
+	width: 100%;
+	height: auto;
+	padding: 5px;
+	background-color: rgb(215, 175, 231);
+}
+
+.cabecalho{
+	max-width: 70vw;
+	height: auto;
+	display: flex;
+	margin: 0 auto;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.logo{
+	width: 150px;
+	height: 150px;
+}
+
+.logo img{
+	width: 100%;
+	height: 100%;
+	border-radius: 30px;
+}
+
+.title{
+	font-size: 1.6rem;
+	color: rgb(207, 96, 198);
+	padding: 10px;
+    text-transform: uppercase;
+}
+
 .container-titulo{ 
     width: 100%;
     text-align: center;
@@ -20,7 +54,7 @@ body{
 
 .titulo{
     color: #74BDCB;
-    font-size: 30px;
+    font-size: 2.2rem;
 }
 
 .container-formulario{
@@ -29,8 +63,8 @@ body{
 }
 
 .formulario{
-    width: 820px;
-    height: 350px;
+    width: 40%;
+    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -42,8 +76,8 @@ body{
 }
 
 .input-formulario{
-    width: 800px;
-    height: 30px;
+    width: 35vw;
+    height: 5vh;
     border: 1px solid #FFA384;
     background-color: #ffa3841c;
     border-radius: 10px;
@@ -51,7 +85,7 @@ body{
 }
 
 .label-formulario{
-    font-size: 14px;
+    font-size: 1.1rem;
     font-weight: 600;
     display: flex;
     justify-content: flex-start;
@@ -59,8 +93,8 @@ body{
 }
 
 .btn{
-    width: 150px;
-    font-size: 18px;
+    width: 15vw;
+    font-size: 1.4rem;
     letter-spacing: 2px;
     background-color: #FFA384;
     color: #EFE7BC;

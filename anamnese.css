@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+*{
+  margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Nunito", sans-serif;
+}
+
+.container-cabecalho{
+	width: 100%;
+	height: auto;
+	padding: 5px;
+	background-color: rgb(215, 175, 231);
+}
+
+.cabecalho{
+	max-width: 70vw;
+	height: auto;
+	display: flex;
+	margin: 0 auto;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.logo{
+	width: 150px;
+	height: 150px;
+}
+
+.logo img{
+	width: 100%;
+	height: 100%;
+	border-radius: 30px;
+}
+
+.title{
+	font-size: 1.6rem;
+	color: rgb(207, 96, 198);
+	padding: 10px;
+}
+
+.container-principal{
+	width: 100%;
+	height: auto;
+	
+	border: 3px solid green;
+}
+
+.container-principal h2{
+	text-align: center;
+	font-size: 2.5rem;
+	color: rgb(207, 96, 198);
+	margin:  20px 0 30px;
+}
+
+.formulario{
+	max-width: 70vw;
+	margin: 0 auto;
+	padding: 30px;
+	border: 3px solid red;
+}
+
+.formulario-campo{
+	width: 100%;
+	height: 100%;
+	border: 2px solid gray;
+	padding: 10px;
+}
+.formulario-campo {
+	display: flex;
+	flex-direction: column;
+  }
+
+.formulario-campo legend{
+	font-size: 1.8rem;
+	margin-left: 3vw;
+	color: rgb(207, 96, 198);
+}
+
+
+.label-radio {
+	font-weight: bold;
+	display: inline-block;
+	width: 200px; /* Defina um valor de largura para garantir alinhamento */
+  }
+
+  .campo-radio {
+	display: flex;
+	align-items: center;
+	margin-bottom: 15px;
+  }
+
+  .campo-radio div {
+	margin-right: 15px;
+  }
+  
+  input[type="radio"] {
+	margin-right: 5px;
+  }
+  
+  input[type="text"],
+  input[type="date"],
+  select {
+	width: 100%;
+	padding: 8px;
+	margin-top: 5px;
+	margin-bottom: 15px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	font-size: 1em;
+  }
